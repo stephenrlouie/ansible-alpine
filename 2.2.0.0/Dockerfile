@@ -12,7 +12,7 @@ RUN echo "===> Adding Python runtime..."  && \
     apk --update add python py-pip openssl ca-certificates    && \
     apk --update add --virtual build-dependencies \
                 python-dev libffi-dev openssl-dev build-base  && \
-    pip install --upgrade pip cffi                            && \
+                pip install --upgrade pip cffi                            && \
     \
     \
     echo "===> Installing Ansible..."  && \
@@ -21,7 +21,7 @@ RUN echo "===> Adding Python runtime..."  && \
     \
     echo "===> Removing package list..."  && \
     apk del build-dependencies            && \
-    rm -rf /var/cache/apk/*               && \
+    rm -rf /var/cache/apk/*
 
 
 # default command: display Ansible version
