@@ -21,7 +21,7 @@ RUN echo "===> Adding Python runtime..."  && \
     \
     echo "===> Removing package list..."  && \
     apk del build-dependencies            && \
-    rm -rf /var/cache/apk/*               && \
+    rm -rf /var/cache/apk*
 
 
 # default command: display Ansible version
